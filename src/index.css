@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #7A3E3E;
+  --color-burgundy-light: #9B5B5B;
+  --color-beige: #FAF3E0;
+  --color-beige-dark: #F5E6D3;
+  --color-ink: #2D1A1A;
+  
+  --font-display: "Montserrat", sans-serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-beige text-ink font-sans antialiased;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-light;
+  }
+}
+
+.glass-card {
+  @apply bg-white/60 backdrop-blur-xl border border-white/30 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-burgundy text-white px-10 py-5 rounded-full font-medium transition-all duration-500 hover:bg-burgundy-light hover:shadow-2xl hover:shadow-burgundy/30 active:scale-95 tracking-wide;
+}
+
+.btn-secondary {
+  @apply border border-burgundy/30 text-burgundy px-10 py-5 rounded-full font-medium transition-all duration-500 hover:bg-burgundy hover:text-white hover:border-burgundy active:scale-95 tracking-wide;
+}
+
+.editorial-line {
+  @apply h-[1px] bg-burgundy/20 w-full;
+}
